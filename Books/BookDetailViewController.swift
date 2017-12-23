@@ -10,9 +10,15 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
+
+    @IBOutlet var bookImageView: UIImageView!
+    
+    var bookImageName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        bookImageView.image = UIImage(named: bookImageName)
         // Do any additional setup after loading the view.
     }
 
@@ -21,8 +27,13 @@ class BookDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBookDetail" {
+            
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
