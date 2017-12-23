@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B72F35C31FEEA3A10078237C /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F35C21FEEA3A10078237C /* BookDetailViewController.swift */; };
+		B72F35C51FEEAC720078237C /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F35C41FEEAC720078237C /* Book.swift */; };
 		B7FB0DE71FEBDFC000193363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0DE61FEBDFC000193363 /* AppDelegate.swift */; };
 		B7FB0DE91FEBDFC000193363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB0DE81FEBDFC000193363 /* ViewController.swift */; };
 		B7FB0DEC1FEBDFC000193363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7FB0DEA1FEBDFC000193363 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		B72F35C21FEEA3A10078237C /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		B72F35C41FEEAC720078237C /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		B7FB0DE31FEBDFC000193363 /* Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Books.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FB0DE61FEBDFC000193363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7FB0DE81FEBDFC000193363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B72F35C61FEEB08B0078237C /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				B7FB0DEA1FEBDFC000193363 /* Main.storyboard */,
+				B7FB0DEF1FEBDFC000193363 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		B72F35C71FEEB09C0078237C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B72F35C41FEEAC720078237C /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B72F35C81FEEB0AD0078237C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7FB0DF81FEBEA7800193363 /* BookTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B72F35C91FEEB0BC0078237C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7FB0DF91FEBEA7800193363 /* BookTableViewController.swift */,
+				B72F35C21FEEA3A10078237C /* BookDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B7FB0DDA1FEBDFC000193363 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +96,14 @@
 		B7FB0DE51FEBDFC000193363 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				B7FB0DF81FEBEA7800193363 /* BookTableViewCell.swift */,
-				B7FB0DF91FEBEA7800193363 /* BookTableViewController.swift */,
+				B72F35C91FEEB0BC0078237C /* Controller */,
+				B72F35C81FEEB0AD0078237C /* View */,
+				B72F35C71FEEB09C0078237C /* Model */,
+				B72F35C61FEEB08B0078237C /* StoryBoard */,
 				B7FB0DE61FEBDFC000193363 /* AppDelegate.swift */,
 				B7FB0DE81FEBDFC000193363 /* ViewController.swift */,
-				B7FB0DEA1FEBDFC000193363 /* Main.storyboard */,
 				B7FB0DED1FEBDFC000193363 /* Assets.xcassets */,
-				B7FB0DEF1FEBDFC000193363 /* LaunchScreen.storyboard */,
 				B7FB0DF21FEBDFC000193363 /* Info.plist */,
-				B72F35C21FEEA3A10078237C /* BookDetailViewController.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -147,6 +182,7 @@
 			files = (
 				B7FB0DE91FEBDFC000193363 /* ViewController.swift in Sources */,
 				B7FB0DFA1FEBEA7800193363 /* BookTableViewCell.swift in Sources */,
+				B72F35C51FEEAC720078237C /* Book.swift in Sources */,
 				B7FB0DFB1FEBEA7800193363 /* BookTableViewController.swift in Sources */,
 				B7FB0DE71FEBDFC000193363 /* AppDelegate.swift in Sources */,
 				B72F35C31FEEA3A10078237C /* BookDetailViewController.swift in Sources */,

@@ -10,14 +10,14 @@ import UIKit
 
 class BookTableViewController: UITableViewController {
 
-    var book1Titles = ["A", "B", "C"]
-    var book1Images = ["padthai", "sushi", "burger"]
-    var book1Authors = ["a","b","c"]
     
-    
-    var book2Titles = ["D", "E", "F"]
-    var book2Images = [UIImage(named: "padthai"), UIImage(named: "sushi"), UIImage(named: "burger")]
-    var book2Authors = ["a","b","c"]
+    var books:[Book] = [
+        Book(title: "aa", author: "aa", category: "aa", price: 3.40, image: "padthai"),
+        Book(title: "bb", author: "aa", category: "aa", price: 3.40, image: "sushi"),
+        Book(title: "cc", author: "aa", category: "aa1", price: 3.40, image: "burger"),
+        Book(title: "dd", author: "aa", category: "aa1", price: 3.40, image: "padthai")
+        ]
+
     
     var bookIsInterested = Array(repeating: false, count: 3)
 
@@ -48,7 +48,7 @@ class BookTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return book1Titles.count
+        return books.count
     }
 
     
@@ -56,12 +56,12 @@ class BookTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookTableViewCell
         
-        cell.nameLabel.text = book1Titles[indexPath.row]
-        cell.typeLabel.text = book1Authors[indexPath.row]
-        cell.locationLabel.text = "Wrocław"
-        cell.thumbailImageView.image = UIImage(named: book1Images[indexPath.row]) 
+        cell.nameLabel.text = books[indexPath.row].title
+        cell.typeLabel.text = books[indexPath.row].author
+        //cell.locationLabel.text= books[indexPath.row].price
+        cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
         
-        cell.heartImageView.isHidden = bookIsInterested[indexPath.row] ? false : true
+        //cell.heartImageView.isHidden = bookIsInterested[indexPath.row] ? false : true
         return cell
     }
  
@@ -105,10 +105,7 @@ class BookTableViewController: UITableViewController {
         if segue.identifier == "showBookDetails" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! BookDetailViewController
-                destinationController.bookImageName = book1Images[indexPath.row]
-//                destinationController.restaurantName = restaurantNames[indexPath.row]
-//                destinationController.restaurantType = restaurantTypes[indexPath.row]
-//                destinationController.restaurantLocation = restaurantLocations[indexPath.row]
+                destinationController.book = books[indexPath.row]
             }
         }
     }

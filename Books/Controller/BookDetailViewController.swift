@@ -12,13 +12,20 @@ class BookDetailViewController: UIViewController {
 
 
     @IBOutlet var bookImageView: UIImageView!
-    
-    var bookImageName = ""
+    @IBOutlet var bookTitle: UILabel!
+    @IBOutlet var bookAuthor: UILabel!
+    @IBOutlet var bookPrice: UILabel!
+
+    var book: Book = Book()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bookImageView.image = UIImage(named: bookImageName)
+        bookImageView.image = UIImage(named: book.image)
+        bookTitle.text = book.title
+        bookAuthor.text = book.author
+       // bookPrice.text = book.price
+        
         
         navigationItem.largeTitleDisplayMode = .never
     }
