@@ -13,12 +13,12 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
-    @IBOutlet var thumbailImageView: UIImageView! {
-        didSet {
-            thumbailImageView.layer.cornerRadius = 30.0
-            thumbailImageView.clipsToBounds = true
-        }
-    }
+    @IBOutlet var thumbailImageView: UIImageView!// {
+//        didSet {
+//            thumbailImageView.layer.cornerRadius = 30.0
+//            thumbailImageView.clipsToBounds = true
+//        }
+//    }
     
     @IBOutlet var heartImageView: UIImageView!
 

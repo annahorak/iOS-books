@@ -12,10 +12,13 @@ class BookTableViewController: UITableViewController {
 
     
     var books:[Book] = [
-        Book(title: "aa", author: "aa", category: "aa", price: 3.40, image: "padthai"),
-        Book(title: "bb", author: "aa", category: "aa", price: 3.40, image: "sushi"),
-        Book(title: "cc", author: "aa", category: "aa1", price: 3.40, image: "burger"),
-        Book(title: "dd", author: "aa", category: "aa1", price: 3.40, image: "padthai")
+        Book(title: "\"Rzeka tajemnic\"", author: "Dennis Lehane", category: "kryminalne", description: "", price: 36.90, image: "rzeka_tajemnic"),
+        Book(title: "\"Czerwony smok\"", author: "Thomas Harris", category: "kryminalne", description: "", price: 29.90, image: "czerwony_smok"),
+        Book(title: "\"Wyspa tajemnic\"", author: "Dennis Lehane", category: "kryminalne", description: "", price: 39.90, image: "wyspa_tajemnic"),
+        Book(title: "\"Mężczyźni, którzy  nienawidzą kobiet\"", author: "Stieg Larsson", category: "kryminalne", description: "", price: 69.90, image: "mezczyzni"),
+        Book(title: "\"Zaginiona dziewczyna\"", author: "Gillian Flynn", category: "kryminalne", description: "", price: 49.90, image: "zaginiona_dziewczyna"),
+        Book(title: "\"Pan Mercedes\"", author: "Stephen King", category: "kryminalne", description: "", price: 69.90, image: "pan_mercedes"),
+        Book(title: "\"Morderstwo w Orient Expressie\"", author: "Agatha Christie", category: "kryminalne", description: "", price: 29.90, image: "morderstwo"),
         ]
 
     
@@ -57,8 +60,8 @@ class BookTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookTableViewCell
         
         cell.nameLabel.text = books[indexPath.row].title
-        cell.typeLabel.text = books[indexPath.row].author
-        //cell.locationLabel.text= books[indexPath.row].price
+        //cell.typeLabel.text = books[indexPath.row].price
+        cell.locationLabel.text  = books[indexPath.row].author
         cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
         
         //cell.heartImageView.isHidden = bookIsInterested[indexPath.row] ? false : true

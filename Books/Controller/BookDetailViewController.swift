@@ -15,6 +15,7 @@ class BookDetailViewController: UIViewController {
     @IBOutlet var bookTitle: UILabel!
     @IBOutlet var bookAuthor: UILabel!
     @IBOutlet var bookPrice: UILabel!
+    @IBOutlet var bookDescription: UILabel!
 
     var book: Book = Book()
     
@@ -24,8 +25,8 @@ class BookDetailViewController: UIViewController {
         bookImageView.image = UIImage(named: book.image)
         bookTitle.text = book.title
         bookAuthor.text = book.author
+        bookDescription.text = book.description
        // bookPrice.text = book.price
-        
         
         navigationItem.largeTitleDisplayMode = .never
     }
