@@ -11,7 +11,7 @@ import UIKit
 class BookTableViewController: UITableViewController {
 
     var book1Titles = ["A", "B", "C"]
-    var book1Images = [UIImage(named: "padthai"), UIImage(named: "sushi"), UIImage(named: "burger")]
+    var book1Images = ["padthai", "sushi", "burger"]
     var book1Authors = ["a","b","c"]
     
     
@@ -59,7 +59,7 @@ class BookTableViewController: UITableViewController {
         cell.nameLabel.text = book1Titles[indexPath.row]
         cell.typeLabel.text = book1Authors[indexPath.row]
         cell.locationLabel.text = "Wrocław"
-        cell.thumbailImageView.image = book1Images[indexPath.row]
+        cell.thumbailImageView.image = UIImage(named: book1Images[indexPath.row]) 
         
         cell.heartImageView.isHidden = bookIsInterested[indexPath.row] ? false : true
         return cell
@@ -101,14 +101,16 @@ class BookTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showBookDetails" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! BookDetailViewController
+                destinationController.bookImageName = book1Images[indexPath.row]
+//                destinationController.restaurantName = restaurantNames[indexPath.row]
+//                destinationController.restaurantType = restaurantTypes[indexPath.row]
+//                destinationController.restaurantLocation = restaurantLocations[indexPath.row]
+            }
+        }
     }
-    */
 
 }

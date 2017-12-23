@@ -19,7 +19,8 @@ class BookDetailViewController: UIViewController {
         super.viewDidLoad()
 
         bookImageView.image = UIImage(named: bookImageName)
-        // Do any additional setup after loading the view.
+        
+        navigationItem.largeTitleDisplayMode = .never
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,13 +28,8 @@ class BookDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showBookDetail" {
-            
-        }
-    }
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
