@@ -10,9 +10,9 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
 
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var locationLabel: UILabel!
-    @IBOutlet var typeLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var priceLabel: UILabel!
     @IBOutlet var thumbailImageView: UIImageView!// {
 //        didSet {
 //            thumbailImageView.layer.cornerRadius = 30.0

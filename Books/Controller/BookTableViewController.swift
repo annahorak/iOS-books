@@ -59,9 +59,9 @@ class BookTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookTableViewCell
         
-        cell.nameLabel.text = books[indexPath.row].title
+        cell.titleLabel.text = books[indexPath.row].title
         //cell.typeLabel.text = books[indexPath.row].price
-        cell.locationLabel.text  = books[indexPath.row].author
+        cell.authorLabel.text  = books[indexPath.row].author
         cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
         
         //cell.heartImageView.isHidden = bookIsInterested[indexPath.row] ? false : true
