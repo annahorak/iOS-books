@@ -63,7 +63,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailShortTextTableViewCell.self), for: indexPath) as! BookDetailShortTextTableViewCell
             cell.iconImageView.image = UIImage(named: "price")
-            cell.shortTextLabel.text = "Ania"
+            cell.shortTextLabel.text = "\(book.price)"
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailDescriptionTableViewCell.self), for: indexPath) as! BookDetailDescriptionTableViewCell
