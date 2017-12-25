@@ -75,45 +75,4 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
             fatalError("Failed to instantiate the table view cell for detail view controller")
         }
     }
-    
-    
-    
-    
-//    @IBOutlet var bookImageView: UIImageView!
-//    @IBOutlet var bookTitle: UILabel!
-//    @IBOutlet var bookAuthor: UILabel!
-//    @IBOutlet var bookPrice: UILabel!
-//    @IBOutlet var bookDescription: UILabel!
-//
-//    var book: Book = Book()
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        bookImageView.image = UIImage(named: book.image)
-//        bookTitle.text = book.title
-//        bookAuthor.text = book.author
-//        bookDescription.text = book.description
-//       // bookPrice.text = book.price
-//
-//        navigationItem.largeTitleDisplayMode = .never
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
-//
-//
-//
-//    /*
-//    // MARK: - Navigation
-//
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//    }
-//    */
-
 }

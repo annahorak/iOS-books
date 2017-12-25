@@ -55,7 +55,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="A4J-eO-7Oa" kind="show" identifier="romanse" id="S4d-HL-pfj"/>
+                                            <segue destination="A4J-eO-7Oa" kind="showDetail" identifier="romanse" action="showViewController:sender:" id="S4d-HL-pfj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUD-KU-P13">
@@ -64,9 +64,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ZCZ-i0-bYT"/>
                                         </constraints>
-                                        <state key="normal" title="Książki3">
+                                        <state key="normal" title="Biografie">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="A4J-eO-7Oa" kind="show" identifier="biografie" id="DTB-G4-9Xb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20i-nx-LQi">
                                         <rect key="frame" x="0.0" y="150" width="300" height="40"/>
@@ -74,9 +77,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="uyb-KT-8aq"/>
                                         </constraints>
-                                        <state key="normal" title="Książki4">
+                                        <state key="normal" title="Fantasy i horrory">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="A4J-eO-7Oa" kind="showDetail" identifier="horrory" id="7qd-Fg-ljj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSN-9Z-e23">
                                         <rect key="frame" x="0.0" y="200" width="300" height="40"/>
@@ -346,6 +352,6 @@
         <image name="heart-tick" width="22" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="S4d-HL-pfj"/>
+        <segue reference="7qd-Fg-ljj"/>
     </inferredMetricsTieBreakers>
 </document>
