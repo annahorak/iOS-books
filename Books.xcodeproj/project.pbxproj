@@ -82,6 +82,7 @@
 			children = (
 				B7FB0DF91FEBEA7800193363 /* BookTableViewController.swift */,
 				B72F35C21FEEA3A10078237C /* BookDetailViewController.swift */,
+				B7FB0DE81FEBDFC000193363 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,7 +111,6 @@
 				B72F35C71FEEB09C0078237C /* Model */,
 				B72F35C61FEEB08B0078237C /* StoryBoard */,
 				B7FB0DE61FEBDFC000193363 /* AppDelegate.swift */,
-				B7FB0DE81FEBDFC000193363 /* ViewController.swift */,
 				B7FB0DED1FEBDFC000193363 /* Assets.xcassets */,
 				B7FB0DF21FEBDFC000193363 /* Info.plist */,
 			);
