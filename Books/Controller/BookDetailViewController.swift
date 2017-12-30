@@ -64,7 +64,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailShortTextTableViewCell.self), for: indexPath) as! BookDetailShortTextTableViewCell
             cell.iconImageView.image = UIImage(named: "price")
-            cell.shortTextLabel.text = String(format: "%.02f zł", book.price) //"\(book.price)"
+            cell.shortTextLabel.text = String(format: "%.02f zł", book.price)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailDescriptionTableViewCell.self), for: indexPath) as! BookDetailDescriptionTableViewCell
@@ -72,11 +72,12 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagViewCell.self), for: indexPath) as! ShoppingBagViewCell
-            cell.shoppingBagLabel.text = String(format: "%.02f zł", bag) // "\(bag)"
+            cell.shoppingBagLabel.text = String(format: "%.02f zł", bag)
             return cell
             
         default:
             fatalError("Failed to instantiate the table view cell for detail view controller")
         }
     }
+    
 }

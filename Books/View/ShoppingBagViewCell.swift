@@ -10,13 +10,16 @@ import UIKit
 
 class ShoppingBagViewCell: UITableViewCell {
     
-    @IBOutlet var bagIconImageView: UIImageView!
+    @IBOutlet var bagButton: UIButton!
     @IBOutlet var shoppingBagLabel: UILabel! {
         didSet {
             shoppingBagLabel.numberOfLines = 0
         }
     }
     
+    @IBAction func clicked(_ sender: Any) {
+        shoppingBagLabel.text = "text"
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +31,6 @@ class ShoppingBagViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
     
 }
 

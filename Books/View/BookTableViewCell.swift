@@ -13,15 +13,7 @@ class BookTableViewCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var thumbailImageView: UIImageView!// {
-//        didSet {
-//            thumbailImageView.layer.cornerRadius = 30.0
-//            thumbailImageView.clipsToBounds = true
-//        }
-//    }
-    
-    @IBOutlet var heartImageView: UIImageView!
-
+    @IBOutlet var thumbailImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

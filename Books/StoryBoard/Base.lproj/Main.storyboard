@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -176,7 +177,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="authorLabel" destination="dwi-Ps-2sO" id="xqu-qZ-W0l"/>
-                                    <outlet property="heartImageView" destination="U96-or-frM" id="WUj-hz-9Nr"/>
                                     <outlet property="priceLabel" destination="Dgb-0Y-ac8" id="Whd-0Z-tRn"/>
                                     <outlet property="thumbailImageView" destination="wT3-AW-YLK" id="8Hd-Rc-0jC"/>
                                     <outlet property="titleLabel" destination="IFn-1A-UDZ" id="dHI-zL-TIE"/>
@@ -214,11 +214,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sZ3-QB-7nY">
+                                            <rect key="frame" x="97.5" y="10" width="179.5" height="16.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twój koszyk: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMT-cR-8Oa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="83.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShoppingBag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pi-Fg-914">
+                                                    <rect key="frame" x="93.5" y="0.0" width="86" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.1748579502" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyJ-il-8Ih" userLabel="Header Image View">
-                                            <rect key="frame" x="50" y="0.0" width="275" height="430"/>
+                                            <rect key="frame" x="50" y="30" width="275" height="400"/>
                                         </imageView>
                                         <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sh-7q-fOa" userLabel="Dim View">
-                                            <rect key="frame" x="50" y="0.0" width="275" height="430"/>
+                                            <rect key="frame" x="50" y="30" width="275" height="400"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLz-P0-C1z" userLabel="Name Label">
@@ -242,19 +260,21 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="vLz-P0-C1z" firstAttribute="leading" secondItem="OMf-dn-gUf" secondAttribute="leading" id="0eF-AY-HMD"/>
-                                        <constraint firstItem="9Sh-7q-fOa" firstAttribute="top" secondItem="dhI-Sk-QdD" secondAttribute="top" id="2cb-NN-f83"/>
+                                        <constraint firstItem="9Sh-7q-fOa" firstAttribute="top" secondItem="dhI-Sk-QdD" secondAttribute="top" constant="30" id="2cb-NN-f83"/>
                                         <constraint firstAttribute="trailing" secondItem="xyJ-il-8Ih" secondAttribute="trailing" constant="50" id="5oI-a3-z4J"/>
                                         <constraint firstAttribute="bottom" secondItem="OMf-dn-gUf" secondAttribute="bottom" constant="14" id="8r6-dO-nJ8"/>
                                         <constraint firstAttribute="bottom" secondItem="xyJ-il-8Ih" secondAttribute="bottom" id="NOw-zh-yDz"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OMf-dn-gUf" secondAttribute="trailing" constant="20" symbolic="YES" id="R7U-mW-Cju"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OMf-dn-gUf" secondAttribute="trailing" id="R7U-mW-Cju"/>
                                         <constraint firstItem="OMf-dn-gUf" firstAttribute="top" secondItem="vLz-P0-C1z" secondAttribute="bottom" constant="3" id="Uqu-nD-1bd"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vLz-P0-C1z" secondAttribute="trailing" constant="50" id="bOW-6X-Tvd"/>
                                         <constraint firstAttribute="trailing" secondItem="9Sh-7q-fOa" secondAttribute="trailing" constant="50" id="bTf-am-gXw"/>
                                         <constraint firstItem="OMf-dn-gUf" firstAttribute="leading" secondItem="dhI-Sk-QdD" secondAttribute="leading" constant="60" id="fEe-gq-ZTP"/>
+                                        <constraint firstItem="sZ3-QB-7nY" firstAttribute="top" secondItem="dhI-Sk-QdD" secondAttribute="top" constant="10" id="hBn-eW-ZWo"/>
+                                        <constraint firstItem="sZ3-QB-7nY" firstAttribute="centerX" secondItem="9Sh-7q-fOa" secondAttribute="centerX" id="jYO-PT-GnG"/>
                                         <constraint firstAttribute="bottom" secondItem="9Sh-7q-fOa" secondAttribute="bottom" id="okW-ev-kDH"/>
                                         <constraint firstItem="xyJ-il-8Ih" firstAttribute="leading" secondItem="dhI-Sk-QdD" secondAttribute="leading" constant="50" id="q7K-Mr-2WK"/>
                                         <constraint firstItem="9Sh-7q-fOa" firstAttribute="leading" secondItem="dhI-Sk-QdD" secondAttribute="leading" constant="50" id="wla-PY-6QF"/>
-                                        <constraint firstItem="xyJ-il-8Ih" firstAttribute="top" secondItem="dhI-Sk-QdD" secondAttribute="top" id="yky-cf-920"/>
+                                        <constraint firstItem="xyJ-il-8Ih" firstAttribute="top" secondItem="dhI-Sk-QdD" secondAttribute="top" constant="30" id="yky-cf-920"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="categoryLabel" destination="OMf-dn-gUf" id="DDZ-S3-CMB"/>
@@ -333,32 +353,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yku-q7-h9U">
-                                                    <rect key="frame" x="114.5" y="6" width="146" height="50.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yku-q7-h9U">
+                                                    <rect key="frame" x="92.5" y="6" width="191" height="50"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bag" translatesAutoresizingMaskIntoConstraints="NO" id="JQ3-G2-cph">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="CHD-8d-5Hx"/>
-                                                                <constraint firstAttribute="height" constant="50" id="IFZ-FL-Xmz"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ShoppingBag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTg-ET-y1d">
-                                                            <rect key="frame" x="60" y="17" width="86" height="16.5"/>
-                                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fay-RF-aMj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                                            <state key="normal" title="Dodaj do koszyka" image="bag">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="clicked:" destination="kO4-20-u71" eventType="touchUpInside" id="SRq-3Y-C4w"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yku-q7-h9U" firstAttribute="top" secondItem="1K3-O0-n5g" secondAttribute="topMargin" constant="-5" id="LPQ-PK-Ccr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yku-q7-h9U" secondAttribute="bottom" constant="-2" id="esc-rE-cVT"/>
                                                 <constraint firstItem="yku-q7-h9U" firstAttribute="centerX" secondItem="1K3-O0-n5g" secondAttribute="centerX" id="iWx-KN-BP3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bagIconImageView" destination="JQ3-G2-cph" id="bWC-Lq-sa0"/>
-                                            <outlet property="shoppingBagLabel" destination="uTg-ET-y1d" id="dov-EL-X9j"/>
+                                            <outlet property="bagButton" destination="fay-RF-aMj" id="QYs-vq-FyH"/>
+                                            <outlet property="shoppingBagLabel" destination="1Pi-Fg-914" id="9Ko-2z-qqS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
