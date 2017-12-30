@@ -16,6 +16,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: BookDetailHeaderView!
     
+    var bag : Double = 0.00
     var book: Book = Book()
     
     // MARK: - View controller life style
@@ -48,7 +49,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,12 +64,15 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailShortTextTableViewCell.self), for: indexPath) as! BookDetailShortTextTableViewCell
             cell.iconImageView.image = UIImage(named: "price")
-            cell.shortTextLabel.text = "\(book.price)"
+            cell.shortTextLabel.text = String(format: "%.02f zł", book.price) //"\(book.price)"
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailDescriptionTableViewCell.self), for: indexPath) as! BookDetailDescriptionTableViewCell
             cell.descriptionLabel.text = book.description
-            
+            return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagViewCell.self), for: indexPath) as! ShoppingBagViewCell
+            cell.shoppingBagLabel.text = String(format: "%.02f zł", bag) // "\(bag)"
             return cell
             
         default:

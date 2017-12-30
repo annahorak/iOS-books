@@ -50,7 +50,7 @@ class BookTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookTableViewCell
             
         cell.titleLabel.text = books[indexPath.row].title
-        cell.priceLabel.text = "\(books[indexPath.row].price)"
+        cell.priceLabel.text = String(format: "%.02f zł", books[indexPath.row].price)
         cell.authorLabel.text  = books[indexPath.row].author
         cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
     
