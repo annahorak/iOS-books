@@ -10,15 +10,15 @@ import UIKit
 
 class BookTableViewController: UITableViewController {
 
-    
-//    var bookIsInterested = Array(repeating: false, count: 3)
     var books: [Book] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.separatorStyle = .none
-
+        tableView.cellLayoutMarginsFollowReadableWidth = true
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
 //        navigationController?.navigationBar.prefersLargeTitles = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,10 +26,6 @@ class BookTableViewController: UITableViewController {
         // @objc Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 //         self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
     }
     
     override func didReceiveMemoryWarning() {

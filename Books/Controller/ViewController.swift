@@ -60,6 +60,12 @@ class ViewController: UIViewController {
         Book(title: "\"Pod kopułą\"", author: "King Stephen", category: "horror", description: "Pewnego pogodnego, jesiennego dnia małe amerykańskie miasteczko Chester's Mill zostaje nagle i niewytłumaczalnie odcięte od świata. Otacza je niewidoczne pole siłowe, które mieszkańcy zaczynają nazywać kopułą. Sytuacja szybko się pogarsza. Pole wpływa niekorzystnie na środowisko, a ludzi powoli ogarnia panika… Dale Barbara, weteran wojny w Iraku zarabiający na życie jako wędrowny kucharz, jest zmuszony do pozostania w Chester’s Mill. Wspierany przez wojsko, które znajduje się na zewnątrz kopuły, wraz z garstką ochotników próbuje uspokoić nastroje społeczne. Na drodze staje im Duży Jim Rennie, ambitny lokalny polityk, który za wszelką cenę chce wykorzystać sytuację dla własnych celów. Wraz z synem ukrywają wiele koszmarnych tajemnic, które nie mogą ujrzeć światła dziennego. Czas ucieka, a największym wrogiem mieszkańców jest sama kopuła. Czy dowiedzą się, jak powstała, zanim będzie za późno? Czas goni. A właściwie czasu już brak… ", price: 39.20, image: "pod_kopula")
     ]
     
+    var music: [Music] = [
+        Music(title: "ss", author: "aa", description: "Ania", price: 32.30, image: "", musicPlay: ""),
+        Music(title: "ss1", author: "aa", description: "Ania", price: 32.30, image: "", musicPlay: ""),
+        Music(title: "ss2", author: "aa", description: "Ania", price: 32.30, image: "", musicPlay: "")
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -86,6 +92,10 @@ class ViewController: UIViewController {
         if segue.identifier == "horrory" {
             let destinationController = segue.destination as! BookTableViewController
             destinationController.books = fantasyBooks
+        }
+        if segue.identifier == "showMusic" {
+            let destinationController = segue.destination as! MusicTableViewController
+            destinationController.music = music
         }
     }
 }
