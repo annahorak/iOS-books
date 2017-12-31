@@ -72,7 +72,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagViewCell.self), for: indexPath) as! ShoppingBagViewCell
-            cell.shoppingBagLabel.text = String(format: "%.02f zł", bag)
+            cell.shoppingBagLabel.text = String(format: "%.02f", bag)
             return cell
             
         default:
