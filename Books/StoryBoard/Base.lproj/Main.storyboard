@@ -480,14 +480,14 @@
                                             <rect key="frame" x="6" y="2" width="359" height="76"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Po7-PF-mYg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="70"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="2Kt-4g-sok"/>
-                                                        <constraint firstAttribute="width" constant="55" id="No8-vc-QfU"/>
+                                                        <constraint firstAttribute="width" constant="70" id="No8-vc-QfU"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RAF-xh-2Tv">
-                                                    <rect key="frame" x="70" y="0.0" width="239" height="67.5"/>
+                                                    <rect key="frame" x="85" y="0.0" width="224" height="67.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o74-0S-kdU">
                                                             <rect key="frame" x="0.0" y="0.0" width="35.5" height="47.5"/>
@@ -680,33 +680,8 @@
                                             <outlet property="shortTextLabel" destination="nVQ-5Y-qCV" id="7No-lQ-7FW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookDetailDescriptionTableViewCell" id="uyI-Td-uit" customClass="BookDetailDescriptionTableViewCell" customModule="Books" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="502" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uyI-Td-uit" id="xey-Ba-g2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNH-Yp-36Z">
-                                                    <rect key="frame" x="16" y="12" width="343" height="31.5"/>
-                                                    <fontDescription key="fontDescription" name="Rubik-Light" family="Rubik" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="iNH-Yp-36Z" firstAttribute="top" secondItem="xey-Ba-g2d" secondAttribute="top" constant="12" id="6Cu-Lf-dSB"/>
-                                                <constraint firstAttribute="bottom" secondItem="iNH-Yp-36Z" secondAttribute="bottom" id="97B-6m-KTJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="iNH-Yp-36Z" secondAttribute="trailing" constant="16" id="b11-jL-vbp"/>
-                                                <constraint firstItem="iNH-Yp-36Z" firstAttribute="leading" secondItem="xey-Ba-g2d" secondAttribute="leading" constant="16" id="mzi-s6-oGh"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="descriptionLabel" destination="iNH-Yp-36Z" id="Mcq-pC-ezB"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShoppingBagViewCell" rowHeight="65" id="kkK-ep-AZq" customClass="ShoppingBagViewCell" customModule="Books" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="546" width="375" height="65"/>
+                                        <rect key="frame" x="0.0" y="502" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kkK-ep-AZq" id="f8c-44-SZI">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
@@ -765,6 +740,6 @@
         <image name="bag" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TyC-da-AFg"/>
+        <segue reference="ErV-ZN-3LE"/>
     </inferredMetricsTieBreakers>
 </document>

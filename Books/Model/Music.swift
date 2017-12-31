@@ -16,16 +16,15 @@ class Music {
     var description: String
     var musicPlay: String
     
-    init(title: String, author: String, description: String, price: Double, image: String, musicPlay: String) {
+    init(title: String, author: String, price: Double, image: String, musicPlay: String) {
         self.title = title
         self.author = author
         self.price = price
         self.image = image
-        self.description = description
         self.musicPlay = musicPlay
     }
     
     convenience init() {
-        self.init(title: "", author: "", description: "", price: 0.00, image: "", musicPlay: "")
+        self.init(title: "", author: "", price: 0.00, image: "", musicPlay: "")
     }
 }

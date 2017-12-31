@@ -61,9 +61,16 @@ class ViewController: UIViewController {
     ]
     
     var music: [Music] = [
-        Music(title: "ss", author: "aa", description: "Ania", price: 32.30, image: "", musicPlay: ""),
-        Music(title: "ss1", author: "aa", description: "Ania", price: 32.30, image: "", musicPlay: ""),
-        Music(title: "ss2", author: "aa", description: "Ania", price: 32.30, image: "", musicPlay: "")
+        Music(title: "Christmas", author: "Buble Michael", price: 26.99, image: "christmas", musicPlay: ""),
+        Music(title: "Take Me To The Alley", author: "Porter Gregory", price: 19.99, image: "take_me_to", musicPlay: ""),
+        Music(title: "Born To Die", author: "Del Rey Lana", price: 21.59, image: "lana", musicPlay: ""),
+        Music(title: "Listen Without Prejudice", author: "Michael George", price: 58.59, image: "george", musicPlay: ""),
+        Music(title: "Egzotyka", author: "Quebonafide", price: 35.55, image: "quebo", musicPlay: ""),
+        Music(title: "Revival", author: "Eminem", price: 57.99, image: "eminem", musicPlay: ""),
+        Music(title: "Jestem tu nowa", author: "Wyszkoni Anna", price: 35.99, image: "wyszkoni", musicPlay: ""),
+        Music(title: "Despacito & Mis Grandes Exitos", author: "Fonsi Luis", price: 31.49, image: "despacito", musicPlay: ""),
+        Music(title: "This Is Acting", author: "Sia", price: 22.99, image: "sia", musicPlay: ""),
+        Music(title: "Joanne", author: "Lady Gaga", price: 28.99, image: "gaga", musicPlay: ""),
     ]
 
     override func viewDidLoad() {
