@@ -25,7 +25,7 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
-        
+
         // Configure the table view
         tableView.delegate = self
         tableView.dataSource = self

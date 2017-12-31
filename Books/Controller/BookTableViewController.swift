@@ -17,17 +17,21 @@ class BookTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.separatorStyle = .none
+
+//        navigationController?.navigationBar.prefersLargeTitles = true
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // @objc Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-//        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
-//        self.view.addGestureRecognizer(longPressRecognizer)
+//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,6 +54,8 @@ class BookTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookTableViewCell
             
         cell.titleLabel.text = books[indexPath.row].title
+        cell.titleLabel.numberOfLines = 0
+
         cell.priceLabel.text = String(format: "%.02f zł", books[indexPath.row].price)
         cell.authorLabel.text  = books[indexPath.row].author
         cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
