@@ -91,7 +91,7 @@ class ViewController: UIViewController {
             destinationController.books = criminalBooks
             destinationController.shoppingBagPrice = 0.00
         }
-        if segue.identifier == "romanse" {
+        if segue.identifier == "romans" {
             let destinationController = segue.destination as! BookTableViewController
             destinationController.books = romanceBooks
         }
@@ -107,6 +107,8 @@ class ViewController: UIViewController {
             let destinationController = segue.destination as! MusicTableViewController
             destinationController.music = music
         }
+        
+        
     }
 }
 

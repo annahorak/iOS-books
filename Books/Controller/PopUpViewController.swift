@@ -14,7 +14,6 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var bagLabel: UILabel!
     var labelText: String!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         bagLabel.text = labelText

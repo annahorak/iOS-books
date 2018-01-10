@@ -28,8 +28,8 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         navigationItem.largeTitleDisplayMode = .never
 
         // Configure the table view
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
         tableView.separatorStyle = .none
         
         // Configure header view

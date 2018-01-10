@@ -18,7 +18,6 @@ class BookTableViewController: UITableViewController {
 
         tableView.separatorStyle = .none
         // tableView.cellLayoutMarginsFollowReadableWidth = true
-        navigationController?.navigationBar.prefersLargeTitles = true
         
         // navigationController?.navigationBar.prefersLargeTitles = true
         // Uncomment the following line to preserve selection between presentations
@@ -104,6 +103,10 @@ class BookTableViewController: UITableViewController {
                 destinationController.book = books[indexPath.row]
             }
         }
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+        
 //        let destinationController = segue.destination as! ViewController
 //        destinationController.shoppingBagPrice = shoppingBagPrice
         
