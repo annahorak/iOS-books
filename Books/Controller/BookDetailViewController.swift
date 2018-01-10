@@ -8,16 +8,16 @@
 
 import UIKit
 
-class BookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
 
     // MARK: - Properties
     var shoppingBagPrice: Double = 0.0
-
+    var booksInBag: [Book] = []
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: BookDetailHeaderView!
-    
-    var bag : Double = 0.00
+
     var book: Book = Book()
     
     // MARK: - View controller life style
@@ -28,8 +28,6 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         navigationItem.largeTitleDisplayMode = .never
 
         // Configure the table view
-//        tableView.delegate = self
-//        tableView.dataSource = self
         tableView.separatorStyle = .none
         
         // Configure header view
@@ -40,7 +38,6 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - UITableViewDataSource methods
@@ -82,16 +79,22 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        let destinationController = segue.destination as! BookTableViewController
-//            destinationController.shoppingBagPrice = bag
+//            destinationController.shoppingBagPrice = shoppingBagPrice
         
         if segue.identifier == "addToBag" {
-
            let destinationController = segue.destination as! PopUpViewController
                 let new: Double = shoppingBagPrice + book.price
                 shoppingBagPrice = new
                 destinationController.labelText = String(format: "%.02f", new)
+                booksInBag.append(book)
+
+        }
         
-    }
+        if segue.identifier == "showShoppingBag" {
+            let destinationController = segue.destination as! ShoppingBagViewController
+            destinationController.books = booksInBag
+
+        }
     
-}
+    }
 }

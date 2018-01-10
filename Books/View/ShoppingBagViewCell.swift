@@ -15,22 +15,6 @@ class ShoppingBagViewCell: UITableViewCell {
             shoppingBagLabel.numberOfLines = 0
         }
     }
-//    
-//    @IBAction func clicked(_ sender: Any) {
-//        
-//        guard let shoppingBag = shoppingBagLabel.text else { print(10); return}
-//
-//        let current = Double(shoppingBag)
-//        let new: Double = current! + 1.00
-//
-//        shoppingBagLabel.text = String(format: "%.02f", new)
-//        
-//        
-//        
-////        let current : Double = Double(shoppingBagLabel.text)!
-////        let new: Double = current + 1.00
-//        
-//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
