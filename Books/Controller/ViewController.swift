@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             let destinationController = segue.destination as! BookTableViewController
             destinationController.books = fantasyBooks
         }
-        if segue.identifier == "showMusic" {
+        if segue.identifier == "muzyka" {
             let destinationController = segue.destination as! MusicTableViewController
             destinationController.music = music
         }

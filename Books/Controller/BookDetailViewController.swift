@@ -80,4 +80,13 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+//    @IBAction func showPopUp(_ sender: Any) {
+//        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:  "popUpID") as! PopUpViewController
+//        self.addChildViewController(popUpVC);
+//        popUpVC.view.frame = self.view.frame
+//        self.view.addSubview(popUpVC.view)
+//        popUpVC.didMove(toParentViewController: self)
+//    }
+//    
+    
 }

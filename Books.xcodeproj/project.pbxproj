@@ -13,6 +13,7 @@
 		B72F35CB1FEED9C40078237C /* BookDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F35CA1FEED9C40078237C /* BookDetailHeaderView.swift */; };
 		B72F35CD1FEEDB4D0078237C /* BookDetailShortTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F35CC1FEEDB4D0078237C /* BookDetailShortTextTableViewCell.swift */; };
 		B72F35CF1FEEDBC80078237C /* BookDetailDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72F35CE1FEEDBC80078237C /* BookDetailDescriptionTableViewCell.swift */; };
+		B77415272006085200844B1E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77415262006085200844B1E /* PopUpViewController.swift */; };
 		B7A19A5B1FF915C300488AC8 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5A1FF915C300488AC8 /* Music.swift */; };
 		B7A19A5D1FF9182900488AC8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */; };
 		B7A19A5F1FF9191100488AC8 /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */; };
@@ -32,6 +33,7 @@
 		B72F35CA1FEED9C40078237C /* BookDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderView.swift; sourceTree = "<group>"; };
 		B72F35CC1FEEDB4D0078237C /* BookDetailShortTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailShortTextTableViewCell.swift; sourceTree = "<group>"; };
 		B72F35CE1FEEDBC80078237C /* BookDetailDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		B77415262006085200844B1E /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		B7A19A5A1FF915C300488AC8 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				B7FB0DE81FEBDFC000193363 /* ViewController.swift */,
 				B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */,
 				B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */,
+				B77415262006085200844B1E /* PopUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				B7A19A5D1FF9182900488AC8 /* MusicTableViewController.swift in Sources */,
 				B7FB0DE71FEBDFC000193363 /* AppDelegate.swift in Sources */,
 				B72F35C31FEEA3A10078237C /* BookDetailViewController.swift in Sources */,
+				B77415272006085200844B1E /* PopUpViewController.swift in Sources */,
 				B7A19A5B1FF915C300488AC8 /* Music.swift in Sources */,
 				B72F35CF1FEEDBC80078237C /* BookDetailDescriptionTableViewCell.swift in Sources */,
 				B72F35CD1FEEDB4D0078237C /* BookDetailShortTextTableViewCell.swift in Sources */,

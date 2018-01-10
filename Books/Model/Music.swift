@@ -13,7 +13,6 @@ class Music {
     var author: String
     var price: Double
     var image: String
-    var description: String
     var musicPlay: String
     
     init(title: String, author: String, price: Double, image: String, musicPlay: String) {

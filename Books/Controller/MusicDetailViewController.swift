@@ -66,10 +66,6 @@ class MusicDetailViewController: UIViewController, UITableViewDataSource, UITabl
             cell.shortTextLabel.text = String(format: "%.02f zł", music.price)
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailDescriptionTableViewCell.self), for: indexPath) as! BookDetailDescriptionTableViewCell
-            cell.descriptionLabel.text = music.description
-            return cell
-        case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagViewCell.self), for: indexPath) as! ShoppingBagViewCell
             cell.shoppingBagLabel.text = String(format: "%.02f", bag)
             return cell
