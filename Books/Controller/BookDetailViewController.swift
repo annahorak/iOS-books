@@ -12,7 +12,8 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
 
 
     // MARK: - Properties
-    
+    var shoppingBagPrice: Double = 0.0
+
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: BookDetailHeaderView!
     
@@ -72,7 +73,6 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagViewCell.self), for: indexPath) as! ShoppingBagViewCell
-            cell.shoppingBagLabel.text = String(format: "%.02f", bag)
             return cell
             
         default:
@@ -80,13 +80,18 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
-//    @IBAction func showPopUp(_ sender: Any) {
-//        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier:  "popUpID") as! PopUpViewController
-//        self.addChildViewController(popUpVC);
-//        popUpVC.view.frame = self.view.frame
-//        self.view.addSubview(popUpVC.view)
-//        popUpVC.didMove(toParentViewController: self)
-//    }
-//    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationController = segue.destination as! BookTableViewController
+//            destinationController.shoppingBagPrice = bag
+        
+        if segue.identifier == "addToBag" {
+
+           let destinationController = segue.destination as! PopUpViewController
+                let new: Double = shoppingBagPrice + book.price
+                shoppingBagPrice = new
+                destinationController.labelText = String(format: "%.02f", new)
+        
+    }
     
+}
 }

@@ -11,7 +11,8 @@ import UIKit
 class BookTableViewController: UITableViewController {
 
     var books: [Book] = []
-
+    var shoppingBagPrice: Double = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -103,6 +104,9 @@ class BookTableViewController: UITableViewController {
                 destinationController.book = books[indexPath.row]
             }
         }
+//        let destinationController = segue.destination as! ViewController
+//        destinationController.shoppingBagPrice = shoppingBagPrice
+        
     }
 
 }

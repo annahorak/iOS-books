@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var shoppingBagPrice: Double = 0.0
+
     var criminalBooks: [Book] = [
         Book(title: "\"Rzeka tajemnic\"", author: "Dennis Lehane", category: "kryminalne", description: "Historia trzech przyjaciół z dzieciństwa, których losy ponownie po kilkunastu latach splata morderstwo córki jednego z nich. Najlepsza powieść kryminalna, w której wątek morderstwa jest tylko pretekstem do zadania bardzo ważnych pytań o ludzką naturę i istotę zła. Rozbudowane rysy psychologiczne bohaterów, mocna i zapadająca w pamięci historia, która nie pozwala przejść obojętnie. Lehane między wierszami zdaje się zadawać pytanie: gdzie leży granica pomiędzy napastnikiem, ofiarą i wskazuje palcem problem społecznego napiętnowania.", price: 36.90, image: "rzeka_tajemnic"),
         Book(title: "\"Czerwony smok\"", author: "Thomas Harris", category: "kryminalne", description: "Pierwsza powieść Harrisa, w której pojawia się genialny zabójca Hannibal Lecter. Jest on jednak postacią drugoplanową, a głównym antagonistą jest morderca o pseudonimie Zębowa Wróżka. Powstrzymania psychopaty podejmuje się agent FBI, który kilka lat wcześniej aresztował właśnie Lectera. Barwni i niejednoznaczni bohaterowie oraz mocna, trzymająca w napięciu, a przy tym wyjątkowo brutalna historia sprawiają, że Harris zasłużył aby znaleźć się na tak wysokim miejscu w naszym zestawieniu.", price: 29.90, image: "czerwony_smok"),
@@ -87,6 +89,7 @@ class ViewController: UIViewController {
         if segue.identifier == "kryminalne" {
             let destinationController = segue.destination as! BookTableViewController
             destinationController.books = criminalBooks
+            destinationController.shoppingBagPrice = 0.00
         }
         if segue.identifier == "romanse" {
             let destinationController = segue.destination as! BookTableViewController

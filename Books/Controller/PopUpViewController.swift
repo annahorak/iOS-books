@@ -9,29 +9,31 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
+    
+//    @IBOutlet weak var popUpView: PopUpView!
+    @IBOutlet weak var bagLabel: UILabel!
+    var labelText: String!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bagLabel.text = labelText
 
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { (timer) in
-            self.view.isHidden = true
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             self.dismiss(animated: true, completion: nil)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//        let destinationController = segue.destination as! BookDetailViewController
+//        destinationController.shoppingBagPrice = bag;
     }
-    */
+    
 
 }

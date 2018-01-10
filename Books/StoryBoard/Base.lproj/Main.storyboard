@@ -270,31 +270,6 @@
                                         <outlet property="titleLabel" destination="vLz-P0-C1z" id="re8-0s-aEz"/>
                                     </connections>
                                 </view>
-                                <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" id="sZ3-QB-7nY">
-                                    <rect key="frame" x="0.0" y="611" width="375" height="16.5"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Twój koszyk: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMT-cR-8Oa">
-                                            <rect key="frame" x="0.0" y="0.0" width="321" height="16.5"/>
-                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="bag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pi-Fg-914">
-                                            <rect key="frame" x="331" y="0.0" width="24" height="16.5"/>
-                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="zł" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-4L-cVc">
-                                            <rect key="frame" x="365" y="0.0" width="10" height="16.5"/>
-                                            <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="1" green="0.1748579502" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </stackView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookDetailShortTextTableViewCell" id="ikc-Qc-rha" customClass="BookDetailShortTextTableViewCell" customModule="Books" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="458" width="375" height="44"/>
@@ -376,7 +351,7 @@
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <connections>
-                                                                <segue destination="65c-vw-NYO" kind="presentation" id="XaF-EO-v2V"/>
+                                                                <segue destination="65c-vw-NYO" kind="presentation" identifier="addToBag" id="XaF-EO-v2V"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -388,9 +363,6 @@
                                                 <constraint firstItem="yku-q7-h9U" firstAttribute="centerX" secondItem="1K3-O0-n5g" secondAttribute="centerX" id="iWx-KN-BP3"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="shoppingBagLabel" destination="1Pi-Fg-914" id="9Ko-2z-qqS"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -417,7 +389,7 @@
         <scene sceneID="kX2-hW-RNb">
             <objects>
                 <viewController storyboardIdentifier="popUpID" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="65c-vw-NYO" customClass="PopUpViewController" customModule="Books" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hMG-nM-irU">
+                    <view key="view" contentMode="scaleToFill" id="hMG-nM-irU" customClass="PopUpView" customModule="Books" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -467,7 +439,13 @@
                             <constraint firstItem="eph-pO-Hka" firstAttribute="top" secondItem="hMG-nM-irU" secondAttribute="top" constant="20" id="yJL-8u-N9c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="E0A-17-tMW"/>
+                        <connections>
+                            <outlet property="bagLabel" destination="NIL-6Q-A9L" id="CC2-8n-2bB"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="bagLabel" destination="NIL-6Q-A9L" id="083-p5-kZo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsd-JN-RSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,30 +554,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r3x-g0-Aoh">
-                                            <rect key="frame" x="88" y="10" width="199.5" height="16.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twój koszyk: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj1-Qi-CKx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="83.5" height="16.5"/>
-                                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShoppingBag" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-6e-Idy">
-                                                    <rect key="frame" x="93.5" y="0.0" width="86" height="16.5"/>
-                                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zł" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpu-fN-mPI">
-                                                    <rect key="frame" x="189.5" y="0.0" width="10" height="16.5"/>
-                                                    <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="1" green="0.1748579502" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </stackView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gMq-zA-fer" userLabel="Header Image View">
                                             <rect key="frame" x="50" y="30" width="275" height="400"/>
                                         </imageView>
@@ -630,7 +584,6 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="00l-0t-f3I" secondAttribute="trailing" id="3da-9L-GcR"/>
                                         <constraint firstItem="anm-NX-D0J" firstAttribute="top" secondItem="o5g-ub-XlQ" secondAttribute="top" constant="30" id="3rt-zc-Pkm"/>
                                         <constraint firstItem="gMq-zA-fer" firstAttribute="top" secondItem="o5g-ub-XlQ" secondAttribute="top" constant="30" id="BkH-Oi-eYK"/>
-                                        <constraint firstItem="r3x-g0-Aoh" firstAttribute="centerX" secondItem="anm-NX-D0J" secondAttribute="centerX" id="C74-h0-sRl"/>
                                         <constraint firstItem="anm-NX-D0J" firstAttribute="leading" secondItem="o5g-ub-XlQ" secondAttribute="leading" constant="50" id="G87-Iv-n4N"/>
                                         <constraint firstItem="gMq-zA-fer" firstAttribute="leading" secondItem="o5g-ub-XlQ" secondAttribute="leading" constant="50" id="OJB-b2-yfw"/>
                                         <constraint firstAttribute="bottom" secondItem="anm-NX-D0J" secondAttribute="bottom" id="QPK-bB-ad6"/>
@@ -638,7 +591,6 @@
                                         <constraint firstItem="gIl-qO-oUo" firstAttribute="top" secondItem="00l-0t-f3I" secondAttribute="bottom" constant="3" id="Tsa-rh-Jna"/>
                                         <constraint firstAttribute="bottom" secondItem="gMq-zA-fer" secondAttribute="bottom" id="aX5-Ii-tJ2"/>
                                         <constraint firstAttribute="bottom" secondItem="gIl-qO-oUo" secondAttribute="bottom" constant="14" id="jCm-F8-01V"/>
-                                        <constraint firstItem="r3x-g0-Aoh" firstAttribute="top" secondItem="o5g-ub-XlQ" secondAttribute="top" constant="10" id="pwJ-ot-vhr"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gIl-qO-oUo" secondAttribute="trailing" id="rs1-fG-x9B"/>
                                         <constraint firstAttribute="trailing" secondItem="gMq-zA-fer" secondAttribute="trailing" constant="50" id="s4H-OE-42R"/>
                                         <constraint firstItem="gIl-qO-oUo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o5g-ub-XlQ" secondAttribute="leading" id="vmJ-KI-Nwt"/>
@@ -720,7 +672,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bagButton" destination="hyL-Vq-n2u" id="trn-S7-jaP"/>
-                                            <outlet property="shoppingBagLabel" destination="Jj9-6e-Idy" id="kvY-Gb-4bz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -742,13 +693,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlM-Wj-AiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3348" y="582"/>
+            <point key="canvasLocation" x="3348" y="581.55922038980509"/>
         </scene>
     </scenes>
     <resources>
         <image name="bag" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3jO-PI-iY9"/>
+        <segue reference="vW9-ad-BI7"/>
     </inferredMetricsTieBreakers>
 </document>
