@@ -11,28 +11,25 @@ import UIKit
 class BookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
     // MARK: - Properties
-//    var shoppingBagPrice: Double = 0.0
-//    var booksInBag: [Book] = []
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: BookDetailHeaderView!
-
-    var book: Book = Book()
+        
+    var resource: LibraryObject = LibraryObject()
     
     // MARK: - View controller life style
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = resource.title
         navigationItem.largeTitleDisplayMode = .never
 
         // Configure the table view
         tableView.separatorStyle = .none
         
         // Configure header view
-        headerView.titleLabel.text = book.title
-        headerView.categoryLabel.text = book.category
-        headerView.headerImageView.image = UIImage(named: book.image)
+        headerView.headerImageView.image = UIImage(named: resource.image)
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,19 +53,20 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailShortTextTableViewCell.self), for: indexPath) as! BookDetailShortTextTableViewCell
             cell.iconImageView.image = UIImage(named: "author")
-            cell.shortTextLabel.text = book.author
+            cell.shortTextLabel.text = resource.title + " - " + resource.author
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailShortTextTableViewCell.self), for: indexPath) as! BookDetailShortTextTableViewCell
             cell.iconImageView.image = UIImage(named: "price")
-            cell.shortTextLabel.text = String(format: "%.02f zł", book.price)
+            cell.shortTextLabel.text = String(format: "%.02f zł", resource.price)
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BookDetailDescriptionTableViewCell.self), for: indexPath) as! BookDetailDescriptionTableViewCell
-            cell.descriptionLabel.text = book.description
+            cell.descriptionLabel.text = resource.description
             return cell
         case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagViewCell.self), for: indexPath) as! ShoppingBagViewCell
+            cell.price.text = String(format: "%.02f zł", Data.shoppingBagPrice)
             return cell
             
         default:
@@ -80,13 +78,15 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
         
         if segue.identifier == "addToBag" {
             _ = segue.destination as! PopUpViewController
-                Data.booksInBag.append(book)
-                Data.shoppingBagPrice = Data.shoppingBagPrice + book.price
+                Data.resourcesInBag.append(resource)
+                Data.shoppingBagPrice = Data.shoppingBagPrice + resource.price
+ 
+                self.tableView.reloadData()
         }
         
         if segue.identifier == "showShoppingBag" {
             let destinationController = segue.destination as! ShoppingBagViewController
-            destinationController.books = Data.booksInBag
+            destinationController.resources = Data.resourcesInBag
 
         }
     

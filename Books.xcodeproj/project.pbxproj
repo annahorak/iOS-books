@@ -18,6 +18,8 @@
 		B774152D2006771500844B1E /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774152C2006771500844B1E /* ShoppingBagViewController.swift */; };
 		B774153120067AF900844B1E /* BagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774153020067AF900844B1E /* BagTableViewCell.swift */; };
 		B77415332006C4B000844B1E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77415322006C4B000844B1E /* Data.swift */; };
+		B77415352007202700844B1E /* LibraryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77415342007202700844B1E /* LibraryObject.swift */; };
+		B774153720073AA500844B1E /* buble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B774153620073AA300844B1E /* buble.mp3 */; };
 		B7A19A5B1FF915C300488AC8 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5A1FF915C300488AC8 /* Music.swift */; };
 		B7A19A5D1FF9182900488AC8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */; };
 		B7A19A5F1FF9191100488AC8 /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */; };
@@ -42,6 +44,8 @@
 		B774152C2006771500844B1E /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
 		B774153020067AF900844B1E /* BagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTableViewCell.swift; sourceTree = "<group>"; };
 		B77415322006C4B000844B1E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B77415342007202700844B1E /* LibraryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryObject.swift; sourceTree = "<group>"; };
+		B774153620073AA300844B1E /* buble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = buble.mp3; path = ../../../../../buble.mp3; sourceTree = "<group>"; };
 		B7A19A5A1FF915C300488AC8 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				B72F35C41FEEAC720078237C /* Book.swift */,
 				B7A19A5A1FF915C300488AC8 /* Music.swift */,
+				B77415342007202700844B1E /* LibraryObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		B7FB0DE51FEBDFC000193363 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				B774153620073AA300844B1E /* buble.mp3 */,
 				B72F35C91FEEB0BC0078237C /* Controller */,
 				B72F35C81FEEB0AD0078237C /* View */,
 				B72F35C71FEEB09C0078237C /* Model */,
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7FB0DF11FEBDFC000193363 /* LaunchScreen.storyboard in Resources */,
+				B774153720073AA500844B1E /* buble.mp3 in Resources */,
 				B7FB0DEE1FEBDFC000193363 /* Assets.xcassets in Resources */,
 				B7FB0DEC1FEBDFC000193363 /* Main.storyboard in Resources */,
 			);
@@ -232,6 +239,7 @@
 				B774153120067AF900844B1E /* BagTableViewCell.swift in Sources */,
 				B7A19A5B1FF915C300488AC8 /* Music.swift in Sources */,
 				B72F35CF1FEEDBC80078237C /* BookDetailDescriptionTableViewCell.swift in Sources */,
+				B77415352007202700844B1E /* LibraryObject.swift in Sources */,
 				B72F35CD1FEEDB4D0078237C /* BookDetailShortTextTableViewCell.swift in Sources */,
 				B70550681FF7473800A9F0EF /* ShoppingBagViewCell.swift in Sources */,
 			);

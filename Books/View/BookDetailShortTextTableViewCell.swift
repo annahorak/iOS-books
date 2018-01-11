@@ -10,12 +10,15 @@ import UIKit
 
 class BookDetailShortTextTableViewCell: UITableViewCell {
 
+    
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var shortTextLabel: UILabel! {
         didSet {
             shortTextLabel.numberOfLines = 0
         }
     }
+    
+    @IBOutlet weak var myButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,12 +12,11 @@ class PopUpViewController: UIViewController {
     
 //    @IBOutlet weak var popUpView: PopUpView!
     @IBOutlet weak var bagLabel: UILabel!
-//    var labelText: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bagLabel.text = String(Data.shoppingBagPrice)
-
+        bagLabel.text = String(format: "%.02f", Data.shoppingBagPrice)
+        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             self.dismiss(animated: true, completion: nil)
         }
@@ -28,11 +27,6 @@ class PopUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationController = segue.destination as! BookDetailViewController
-//        destinationController.shoppingBagPrice = bag;
-    }
     
 
 }

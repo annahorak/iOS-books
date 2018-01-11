@@ -24,6 +24,8 @@ class BookDetailHeaderView: UIView {
             categoryLabel.layer.masksToBounds = true
         }
     }
+    
+    
 
     
 

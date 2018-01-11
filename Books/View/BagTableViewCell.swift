@@ -15,7 +15,8 @@ class BagTableViewCell: UITableViewCell {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var thumbailImageView: UIImageView!
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

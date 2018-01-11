@@ -9,6 +9,6 @@
 import Foundation
 
 class Data {
-    static var booksInBag : [Book] = []
+    static var resourcesInBag : [LibraryObject] = []
     static var shoppingBagPrice : Double = 0.00
 }

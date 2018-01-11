@@ -11,11 +11,12 @@ import UIKit
 class BookTableViewController: UITableViewController {
 
     
-    var books: [Book] = []
+    var resources: [LibraryObject] = []
     var shoppingBagPrice: Double = 0.00
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = resources[0].category
 
         tableView.separatorStyle = .none
     }
@@ -33,7 +34,7 @@ class BookTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
+        return resources.count
     }
 
     
@@ -41,12 +42,12 @@ class BookTableViewController: UITableViewController {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! BookTableViewCell
             
-        cell.titleLabel.text = books[indexPath.row].title
+        cell.titleLabel.text = resources[indexPath.row].title
         cell.titleLabel.numberOfLines = 0
 
-        cell.priceLabel.text = String(format: "%.02f zł", books[indexPath.row].price)
-        cell.authorLabel.text  = books[indexPath.row].author
-        cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
+        cell.priceLabel.text = String(format: "%.02f zł", resources[indexPath.row].price)
+        cell.authorLabel.text  = resources[indexPath.row].author
+        cell.thumbailImageView.image = UIImage(named: resources[indexPath.row].image)
     
         //cell.heartImageView.isHidden = bookIsInterested[indexPath.row] ? false : true
         return cell
@@ -58,7 +59,7 @@ class BookTableViewController: UITableViewController {
         if segue.identifier == "showBookDetails" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! BookDetailViewController
-                destinationController.book = books[indexPath.row]
+                destinationController.resource = resources[indexPath.row]
             }
         }
         

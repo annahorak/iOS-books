@@ -10,7 +10,7 @@ import UIKit
 
 class MusicTableViewController: UITableViewController {
     
-    var music: [Music] = []
+    var music: [LibraryObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
