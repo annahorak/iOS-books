@@ -46,5 +46,27 @@ class ShoppingBagViewController: UITableViewController {
         allPrice.text = String(format: "%.02f zł", Data.shoppingBagPrice)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+            // Delete the row from the data source
+            self.books.remove(at: indexPath.row)
+            Data.shoppingBagPrice = Data.shoppingBagPrice - Data.booksInBag[indexPath.row].price
+            Data.booksInBag.remove(at: indexPath.row)
+            self.allPrice.text = String(format: "%.02f zł", Data.shoppingBagPrice)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            // Call completion handler with true to indicate
+            completionHandler(true)
+        }
+        
+        // Customize the action buttons
+        deleteAction.backgroundColor = UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        deleteAction.image = UIImage(named: "delete")
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        return swipeConfiguration
+    }
 
 }
