@@ -206,7 +206,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EwU-gw-F0G">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="dhI-Sk-QdD" userLabel="Header View" customClass="BookDetailHeaderView" customModule="Books" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
@@ -373,6 +373,7 @@
                         <viewLayoutGuide key="safeArea" id="ms4-cp-LfG"/>
                     </view>
                     <navigationItem key="navigationItem" title="Opis książki" id="s46-C3-dpi">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="thD-lR-rkd"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="home" id="IxA-qF-gle">
                             <inset key="imageInsets" minX="0.0" minY="5" maxX="-17" maxY="-2"/>
                             <connections>
@@ -681,7 +682,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yzZ-tJ-rXG">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="fNc-nw-Qwk" userLabel="Header View" customClass="BookDetailHeaderView" customModule="Books" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
@@ -863,6 +864,7 @@
                         <viewLayoutGuide key="safeArea" id="gNr-Fu-BiY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Opis płyty" id="h0e-oF-ph0">
+                        <barButtonItem key="backBarButtonItem" title="Powrót" id="Ufh-ry-aSm"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="home" id="2qy-So-s1Y">
                             <inset key="imageInsets" minX="0.0" minY="5" maxX="-17" maxY="-2"/>
                             <connections>
@@ -977,12 +979,12 @@
         <image name="play" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pSI-Qd-HPk"/>
+        <segue reference="6po-sD-9Jv"/>
         <segue reference="HuB-9E-QGj"/>
         <segue reference="k8L-5o-d90"/>
         <segue reference="GxT-Tq-ltu"/>
         <segue reference="Pcg-l7-WOI"/>
         <segue reference="SfV-Mg-0BQ"/>
-        <segue reference="RGx-XQ-Q0s"/>
+        <segue reference="5Vw-jY-MHY"/>
     </inferredMetricsTieBreakers>
 </document>
