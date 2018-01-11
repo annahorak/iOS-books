@@ -26,9 +26,7 @@ class MusicTableViewController: UITableViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isHidden = false
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

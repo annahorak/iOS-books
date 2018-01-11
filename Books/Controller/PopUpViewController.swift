@@ -12,11 +12,11 @@ class PopUpViewController: UIViewController {
     
 //    @IBOutlet weak var popUpView: PopUpView!
     @IBOutlet weak var bagLabel: UILabel!
-    var labelText: String!
+//    var labelText: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bagLabel.text = labelText
+        bagLabel.text = String(Data.shoppingBagPrice)
 
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             self.dismiss(animated: true, completion: nil)

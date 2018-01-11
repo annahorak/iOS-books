@@ -10,8 +10,10 @@ import UIKit
 
 class ShoppingBagViewController: UITableViewController {
 
-    var books: [Book] = []
+    public var books: [Book] = []
 
+    @IBOutlet weak var allPrice: UILabel!
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,17 +43,8 @@ class ShoppingBagViewController: UITableViewController {
         cell.authorLabel.text  = books[indexPath.row].author
         cell.thumbailImageView.image = UIImage(named: books[indexPath.row].image)
 
+        allPrice.text = String(format: "%.02f zł", Data.shoppingBagPrice)
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

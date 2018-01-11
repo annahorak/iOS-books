@@ -17,6 +17,7 @@
 		B77415292006283D00844B1E /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77415282006283D00844B1E /* PopUpView.swift */; };
 		B774152D2006771500844B1E /* ShoppingBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774152C2006771500844B1E /* ShoppingBagViewController.swift */; };
 		B774153120067AF900844B1E /* BagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774153020067AF900844B1E /* BagTableViewCell.swift */; };
+		B77415332006C4B000844B1E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77415322006C4B000844B1E /* Data.swift */; };
 		B7A19A5B1FF915C300488AC8 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5A1FF915C300488AC8 /* Music.swift */; };
 		B7A19A5D1FF9182900488AC8 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */; };
 		B7A19A5F1FF9191100488AC8 /* MusicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */; };
@@ -40,6 +41,7 @@
 		B77415282006283D00844B1E /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		B774152C2006771500844B1E /* ShoppingBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagViewController.swift; sourceTree = "<group>"; };
 		B774153020067AF900844B1E /* BagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTableViewCell.swift; sourceTree = "<group>"; };
+		B77415322006C4B000844B1E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B7A19A5A1FF915C300488AC8 /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		B7A19A5C1FF9182900488AC8 /* MusicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		B7A19A5E1FF9191100488AC8 /* MusicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDetailViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				B7FB0DE61FEBDFC000193363 /* AppDelegate.swift */,
 				B7FB0DED1FEBDFC000193363 /* Assets.xcassets */,
 				B7FB0DF21FEBDFC000193363 /* Info.plist */,
+				B77415322006C4B000844B1E /* Data.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				B72F35C51FEEAC720078237C /* Book.swift in Sources */,
 				B72F35CB1FEED9C40078237C /* BookDetailHeaderView.swift in Sources */,
 				B7FB0DFB1FEBEA7800193363 /* BookTableViewController.swift in Sources */,
+				B77415332006C4B000844B1E /* Data.swift in Sources */,
 				B7A19A5D1FF9182900488AC8 /* MusicTableViewController.swift in Sources */,
 				B7FB0DE71FEBDFC000193363 /* AppDelegate.swift in Sources */,
 				B72F35C31FEEA3A10078237C /* BookDetailViewController.swift in Sources */,

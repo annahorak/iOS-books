@@ -10,10 +10,9 @@ import UIKit
 
 class BookDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
-
     // MARK: - Properties
-    var shoppingBagPrice: Double = 0.0
-    var booksInBag: [Book] = []
+//    var shoppingBagPrice: Double = 0.0
+//    var booksInBag: [Book] = []
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var headerView: BookDetailHeaderView!
@@ -78,21 +77,16 @@ class BookDetailViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationController = segue.destination as! BookTableViewController
-//            destinationController.shoppingBagPrice = shoppingBagPrice
         
         if segue.identifier == "addToBag" {
-           let destinationController = segue.destination as! PopUpViewController
-                let new: Double = shoppingBagPrice + book.price
-                shoppingBagPrice = new
-                destinationController.labelText = String(format: "%.02f", new)
-                booksInBag.append(book)
-
+            _ = segue.destination as! PopUpViewController
+                Data.booksInBag.append(book)
+                Data.shoppingBagPrice = Data.shoppingBagPrice + book.price
         }
         
         if segue.identifier == "showShoppingBag" {
             let destinationController = segue.destination as! ShoppingBagViewController
-            destinationController.books = booksInBag
+            destinationController.books = Data.booksInBag
 
         }
     

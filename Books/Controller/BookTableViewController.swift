@@ -10,22 +10,14 @@ import UIKit
 
 class BookTableViewController: UITableViewController {
 
-    var books: [Book] = []
-    var shoppingBagPrice: Double = 0.0
     
+    var books: [Book] = []
+    var shoppingBagPrice: Double = 0.00
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.separatorStyle = .none
-        // tableView.cellLayoutMarginsFollowReadableWidth = true
-        
-        // navigationController?.navigationBar.prefersLargeTitles = true
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // @objc Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,40 +53,6 @@ class BookTableViewController: UITableViewController {
     }
  
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBookDetails" {
@@ -103,12 +61,6 @@ class BookTableViewController: UITableViewController {
                 destinationController.book = books[indexPath.row]
             }
         }
-        let backItem = UIBarButtonItem()
-        backItem.title = "Back"
-        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
-        
-//        let destinationController = segue.destination as! ViewController
-//        destinationController.shoppingBagPrice = shoppingBagPrice
         
     }
 

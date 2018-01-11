@@ -469,9 +469,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="aG8-Ua-Had">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Koszyk" id="4zW-lR-CZA"/>
+                            </items>
+                        </navigationBar>
+                        <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="u8h-0J-Dco">
+                            <rect key="frame" x="0.0" y="142" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cena całkowita:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L1-qo-5ER">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="MDk-rc-CMR"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gC-6A-5hu">
+                                    <rect key="frame" x="150" y="0.0" width="37" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="150" id="ZxL-ox-z2f"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="1" reuseIdentifier="Cell2" rowHeight="70" id="Gh6-uz-0VC" customClass="BagTableViewCell" customModule="Books" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gh6-uz-0VC" id="1eV-zN-oxd">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
@@ -538,6 +569,9 @@
                             <outlet property="delegate" destination="OFr-7u-NrU" id="R2u-Si-xwj"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="allPrice" destination="5gC-6A-5hu" id="2Lt-Tu-uM2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dz0-y3-vms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
